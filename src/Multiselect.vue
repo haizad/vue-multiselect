@@ -173,16 +173,16 @@ export default {
     },
     /**
      * String to show when pointing to an option
-     * @default 'Press enter to select'
+     * @default ''
      * @type {String}
      */
     selectLabel: {
       type: String,
-      default: 'Press enter to select'
+      default: ''
     },
     /**
      * String to show when pointing to an option
-     * @default 'Press enter to select'
+     * @default ''
      * @type {String}
      */
     selectGroupLabel: {
@@ -200,16 +200,16 @@ export default {
     },
     /**
      * String to show when pointing to an already selected option
-     * @default 'Press enter to remove'
+     * @default ''
      * @type {String}
      */
     deselectLabel: {
       type: String,
-      default: 'Press enter to remove'
+      default: ''
     },
     /**
      * String to show when pointing to an already selected option
-     * @default 'Press enter to remove'
+     * @default ''
      * @type {String}
      */
     deselectGroupLabel: {
@@ -398,7 +398,7 @@ fieldset[disabled] .multiselect {
   width: 16px;
   height: 16px;
   border-radius: 100%;
-  border-color: #41b883 transparent transparent;
+  border-color: #f9fffc transparent transparent;
   border-style: solid;
   border-width: 2px;
   box-shadow: 0 0 0 1px transparent;
@@ -543,7 +543,7 @@ fieldset[disabled] .multiselect {
   margin-right: 10px;
   color: #fff;
   line-height: 1;
-  background: #41b883;
+  background: #f9fffc;
   margin-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
@@ -705,14 +705,14 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect__option--highlight {
-  background: #41b883;
+  background: #f9fffc;
   outline: none;
   color: white;
 }
 
 .multiselect__option--highlight:after {
   content: attr(data-select);
-  background: #41b883;
+  background: #f9fffc;
   color: white;
 }
 
@@ -728,12 +728,12 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect__option--selected.multiselect__option--highlight {
-  background: #ff6a6a;
+  background: #cfcfcf;
   color: #fff;
 }
 
 .multiselect__option--selected.multiselect__option--highlight:after {
-  background: #ff6a6a;
+  background: #cfcfcf;
   content: attr(data-deselect);
   color: #fff;
 }
@@ -770,12 +770,12 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect__option--group-selected.multiselect__option--highlight {
-  background: #ff6a6a;
+  background: #cfcfcf;
   color: #fff;
 }
 
 .multiselect__option--group-selected.multiselect__option--highlight:after {
-  background: #ff6a6a;
+  background: #cfcfcf;
   content: attr(data-deselect);
   color: #fff;
 }
