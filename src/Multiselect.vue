@@ -26,7 +26,7 @@
           <div class="multiselect__tags-wrap" v-show="visibleValues.length > 0">
             <template v-for="(option, index) of visibleValues" @mousedown.prevent>
               <slot name="tag" :option="option" :search="search" :remove="removeElement">
-                <span class="multiselect__tag" :key="index">
+                <span class="multiselect__tag" :key="index" :style="bgColorStyle">
                   <span v-text="getOptionLabel(option)"></span>
                   <i tabindex="1" @keypress.enter.prevent="removeElement(option)"  @mousedown.prevent="removeElement(option)" class="multiselect__tag-icon"></i>
                 </span>
@@ -41,7 +41,7 @@
         </slot>
         <transition name="multiselect__loading">
           <slot name="loading">
-            <div v-show="loading" class="multiselect__spinner"/>
+            <div v-show="loading" class="multiselect__spinner" :style="colorStyle"/>
           </slot>
         </transition>
         <input
@@ -161,6 +161,14 @@ import pointerMixin from './pointerMixin'
 export default {
   name: 'vue-multiselect',
   mixins: [multiselectMixin, pointerMixin],
+/* eslint-disable */
+  data() {
+
+    return {
+      colorStyle: 'border-color:red;',
+      bgColorStyle: 'background-color:red;'
+    }
+  },
   props: {
     /**
      * name attribute to match optional label element
@@ -385,6 +393,7 @@ fieldset[disabled] .multiselect {
   width: 48px;
   height: 35px;
   background: #fff;
+  /* border-color: #3367FF transparent transparent; */
   display: block;
 }
 
@@ -398,7 +407,6 @@ fieldset[disabled] .multiselect {
   width: 16px;
   height: 16px;
   border-radius: 100%;
-  border-color: #f9fffc transparent transparent;
   border-style: solid;
   border-width: 2px;
   box-shadow: 0 0 0 1px transparent;
@@ -543,7 +551,6 @@ fieldset[disabled] .multiselect {
   margin-right: 10px;
   color: #fff;
   line-height: 1;
-  background: #f9fffc;
   margin-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
@@ -705,14 +712,14 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect__option--highlight {
-  background: #f9fffc;
+  background: #2d56cf;
   outline: none;
   color: white;
 }
 
 .multiselect__option--highlight:after {
   content: attr(data-select);
-  background: #f9fffc;
+  background: #3367FF;
   color: white;
 }
 
