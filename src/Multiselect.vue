@@ -165,8 +165,8 @@ export default {
   data() {
 
     return {
-      colorStyle: 'border-color:red;',
-      bgColorStyle: 'background-color:red;'
+      colorStyle: 'border-color:#2d56cf;',
+      bgColorStyle: 'background-color:#2d56cf;'
     }
   },
   props: {
@@ -446,7 +446,7 @@ fieldset[disabled] .multiselect {
   display: block;
   position: relative;
   width: 100%;
-  min-height: 40px;
+  min-height: 30px;
   text-align: left;
   color: #35495e;
 }
