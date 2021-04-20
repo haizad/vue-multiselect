@@ -76,8 +76,8 @@ export default {
 .multiselect__clear
   position: absolute
   right: 41px
-  height: 40px
-  width: 40px
+  height: 30px
+  width: 30px
   display: block
   cursor: pointer
   z-index: 3

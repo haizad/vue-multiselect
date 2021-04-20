@@ -706,10 +706,10 @@ export default {
 
       if (hasEnoughSpaceBelow || spaceBelow > spaceAbove || this.openDirection === 'below' || this.openDirection === 'bottom') {
         this.preferredOpenDirection = 'below'
-        this.optimizedHeight = Math.min(spaceBelow - 40, this.maxHeight)
+        this.optimizedHeight = Math.min(spaceBelow - 30, this.maxHeight)
       } else {
         this.preferredOpenDirection = 'above'
-        this.optimizedHeight = Math.min(spaceAbove - 40, this.maxHeight)
+        this.optimizedHeight = Math.min(spaceAbove - 30, this.maxHeight)
       }
     }
   }
